@@ -1,0 +1,196 @@
+\documentclass[10.5pt,compsoc,UTF8]{CjC}
+\usepackage{CTEX}
+\usepackage{graphicx}
+\usepackage{footmisc}
+\usepackage{subfigure}
+\usepackage{url}
+\usepackage{multirow}
+\usepackage{multicol}
+\usepackage[noadjust]{cite}
+\usepackage{amsmath,amsthm}
+\usepackage{amssymb,amsfonts}
+\usepackage{booktabs}
+\usepackage{color}
+\usepackage{ccaption}
+\usepackage{booktabs}
+\usepackage{float}
+\usepackage{fancyhdr}
+\usepackage{caption}
+\usepackage{xcolor,stfloats}
+\usepackage{comment}
+\setcounter{page}{1}
+\graphicspath{{figures/}}
+\usepackage{cuted}
+\usepackage{captionhack}
+\usepackage{epstopdf}
+\usepackage{gbt7714}
+\usepackage{stfloats}
+\usepackage{amsmath}
+\usepackage{arydshln}
+%===============================%
+
+%=======设置奇偶页页眉=======%
+\headevenname{\mbox{\quad} \hfill  \mbox{\zihao{-5}{计\quad \quad 算\quad \quad 机\quad \quad 学\quad \quad 报} \hspace {50mm} \mbox{2023 年}}}%
+\headoddname{? 期 \hfill
+作者姓名等：论文题目}
+%=======设置奇偶页页眉=======%
+
+\renewcommand{\thefootnote}{\fnsymbol{footnote}}
+\setcounter{footnote}{0}
+\renewcommand\footnotelayout{\zihao{5-}}
+\newtheoremstyle{mystyle}{0pt}{0pt}{\normalfont}{1em}{\bf}{}{1em}{}
+\theoremstyle{mystyle}
+\renewcommand\figurename{figure~}
+\renewcommand{\thesubfigure}{(\alph{subfigure})}
+\newcommand{\upcite}[1]{\textsuperscript{\cite{#1}}}
+\renewcommand{\labelenumi}{(\arabic{enumi})}
+\newcommand{\tabincell}[2]{\begin{tabular}{@{}#1@{}}#2\end{tabular}}
+\newcommand{\abc}{\color{white}\vrule width 2pt}
+\renewcommand{\bibsection}{}
+\makeatletter
+\renewcommand{\@biblabel}[1]{[#1]\hfill}
+\makeatother
+\setlength\parindent{2em}
+
+\pagestyle{CjCheadings}
+\setmainfont{Times New Roman}
+
+%===========================================================%
+\begin{document}
+
+\hyphenpenalty=50000
+\makeatletter
+\newcommand\mysmall{\@setfontsize\mysmall{7}{9.5}}
+\newenvironment{tablehere}
+  {\def\@captype{table}}
+
+\let\temp\footnote
+\renewcommand \footnote[1]{\temp{\zihao{-5}#1}}
+
+%=======设置首页页眉=======%
+\thispagestyle{empty}%
+\begin{table*}[!t]
+\vspace {-13mm}
+\onecolumn
+\noindent\begin{tabular}{p{168mm}}
+\zihao{5-}
+第??卷\quad 第?期 \hfill 计\quad 算\quad 机\quad 学\quad 报\hfill Vol. ??  No. ?\\
+\zihao{5-}
+20??年?月 \hfill CHINESE JOURNAL OF COMPUTERS \hfill ???. 20??\\
+\hline\\[-5.5mm]
+\hline\end{tabular}\end{table*}
+%=======设置首页页眉=======%
+
+%中文标题、作者与注脚
+{
+\centering
+\vspace {11mm}
+{\zihao{2} \heiti 基于大语言模型, 法律引导的的案例融合方法, 用于司法判决预测 }
+
+\vskip 5mm
+
+{\zihao{3}\fangsong 作者名$^{1)}$\quad  作者名$^{2),3)}$ \quad 作者名$^{3) }$($^*$字体为3号仿宋*作者)}
+\footnote{\noindent \zihao{6}\songti 收稿日期：\quad \quad -\quad -\quad ；最终修改稿收到日期：\quad \quad -\quad -\quad .*投稿时不填写此项*. 本课题得到… …基金中文完整名称(No.项目号)、… …基金中文完整名称(No.项目号)、… … 基金中文完整名称(No.项目号)资助.\textsf{作者名1(通信作者)}，性别，xxxx年生，学位(或目前学历)，职称，是/否计算机学会(CCF)会员（提供会员号),主要研究领域为*****、****.E-mail: **************.\textsf{作者名2（通信作者)}，性别，xxxx年生，学位(或目前学历)，职称，是/否计算机学会(CCF)会员（提供会员号),主要研究领域为*****、****.E-mail: **************. \textsf{作者名3（通信作者)}，性别，xxxx年生，学位(或目前学历)，职称，是/否计算机学会(CCF)会员（提供会员号),主要研究领域为*****、****.E-mail: **************.(给出的电子邮件地址应不会因出国、毕业、更换工作单位等原因而变动。请给出所有作者的电子邮件)
+第1作者手机号码(投稿时必须提供，以便紧急联系，发表时会删除): … …, E-mail: … …*此部分6号宋体*}
+
+\vspace {1mm}
+
+\zihao{6}{$^{1)}$(单位全名 部门(系)全名, 市(或直辖市) 国家名 邮政编码) *字体为6号宋体*单位}
+
+\zihao{6}{$^{2)}$(单位全名 部门(系)全名, 市(或直辖市) 国家名 邮政编码)*中英文单位名称、作者姓名须一致*}
+
+\zihao{6}{$^{3)}$(单位全名 部门(系)全名, 市(或直辖市) 国家名 邮政编码)}
+
+\zihao{6}{\textsf{论文定稿后，作者署名、单位无特殊情况不能变更。若变更，须提交签章申请，国家为中国可以不写，省会城市不写省名，其他国家必须写国家名。}}
+}%中文标题、作者与注脚
+
+\vskip 5mm
+
+\zihao{5-}{
+\setlength{\baselineskip}{16pt}\selectfont{
+\noindent {\heiti 摘\quad 要\quad }
+*中文摘要内容置于此处(英文摘要中要有这些内容)，字体为小5号宋体。摘要贡献部分，要有数据支持，不要出现``...大大提高''、``...显著改善''等描述，正确的描述是``比{\ldots}提高X{\%}''、``在{\ldots}上改善X{\%}''。*摘要\par}}
+
+\vspace {5mm}
+
+\zihao{5-}{\noindent
+{\heiti 关键词 \quad }{*关键词（中文关键字与英文关键字对应且一致，应有5-7个关键词)；关键词；关键词；关键词*  }
+}\par\noindent
+\zihao{5-}{\heiti 中图法分类号\quad } TP\rm{\quad \quad \quad     }
+{\heiti DOI号:\quad } *投稿时不提供DOI号
+
+\vskip 5mm
+
+\begin{center}
+\zihao{3}{ \heiti Title *（中英文题目一致)字体为4号Times New Roman,加粗* Title}\\
+\vspace {5mm}
+\zihao{5}{ NAME Name-Name$^{1)}$ NAME Name$^{2)}$ NAME Name-Name$^{3)}$ *字体为5号Times new Roman*Name}\\
+\vspace {1mm}
+\zihao{6}{{$^{1)}$(Department of ****, University, City ZipCode, China) *字体为6号Times new Roman* Depart.Correspond}}
+
+\zihao{6}{{$^{2)}$(Department of ****, University, City ZipCode)*中国不写国家名*}}
+
+\zihao{6}{{$^{3)}$(Department of ****, University, City ZipCode, country)*外国写国家名*}}
+
+\end{center}
+
+\input{sec/0_abstract}
+
+\begin{multicols}{1}
+\input{sec/1_introduction.tex}
+\input{sec/2_related_work.tex}
+\input{sec/3_method.tex}
+\input{sec/4_expertment.tex}
+\input{sec/5_result.tex}
+\input{sec/9_bib.tex}
+\end{multicols}
+
+\begin{multicols}{1}
+\noindent {\zihao{5}\bf{附录X}.}
+
+{\zihao{5-}\setlength\parindent{2em}
+*\textbf{附录内容}置于此处，字体为小5号宋体。附录内容包括：\textbf{详细的定理证明、公式推导、原始数据}等*}\\\\
+
+\end{multicols}
+
+
+\begin{multicols}{1}
+\begin{biography}[yourphotofilename.jpg]
+\noindent
+\textbf{First A. Author}\ \ *计算机学报第1作者提供照片电子图片，尺寸为1寸。英文作者介绍内容包括：出生年,学位(或目前学历),职称,主要研究领域(\textbf{与中文作者介绍中的研究方向一致}).*
+*字体为小5号Times New Roman*
+\end{biography}
+
+\begin{biography}[yourphotofilename.jpg]
+\noindent
+\textbf{Second B. Author} *英文作者介绍内容包括：出生年,学位(或目前学历),职称,主要研究领域(\textbf{与中文作者介绍中的研究方向一致})。*
+*字体为小5号Times New Roman*
+\end{biography}
+\end{multicols}
+
+
+\begin{multicols}{1}
+\zihao{5}
+\noindent \textbf{Background}
+
+\zihao{5-}{
+\setlength\parindent{2em}
+*论文背景介绍为\textbf{英文}，字体为小5号Times New Roman体*
+
+论文后面为400单词左右的英文背景介绍。介绍的内容包括：
+
+本文研究的问题属于哪一个领域的什么问题。该类问题目前国际上解决到什么程度。
+
+本文将问题解决到什么程度。
+
+课题所属的项目。
+
+项目的意义。
+
+本研究群体以往在这个方向上的研究成果。
+
+本文的成果是解决大课题中的哪一部分，如果涉及863$\backslash
+$973以及其项目、基金、研究计划，注意这些项目的英文名称应书写正确。}
+
+\end{multicols}
+\end{document}

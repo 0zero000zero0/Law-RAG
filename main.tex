@@ -18,8 +18,10 @@
 \usepackage{caption}
 \usepackage{xcolor,stfloats}
 \usepackage{comment}
+\usepackage[colorlinks=true, linkcolor=blue, citecolor=blue, urlcolor=blue]{hyperref}
+\usepackage{cleveref}
 \setcounter{page}{1}
-\graphicspath{{figures/}}
+% \graphicspath{{figures/}}
 \usepackage{cuted}
 \usepackage{captionhack}
 \usepackage{epstopdf}
@@ -89,19 +91,17 @@
 
 \vskip 5mm
 
-{\zihao{3}\fangsong 作者名$^{1)}$\quad  作者名$^{2),3)}$ \quad 作者名$^{3) }$($^*$字体为3号仿宋*作者)}
-\footnote{\noindent \zihao{6}\songti 收稿日期：\quad \quad -\quad -\quad ；最终修改稿收到日期：\quad \quad -\quad -\quad .*投稿时不填写此项*. 本课题得到… …基金中文完整名称(No.项目号)、… …基金中文完整名称(No.项目号)、… … 基金中文完整名称(No.项目号)资助.\textsf{作者名1(通信作者)}，性别，xxxx年生，学位(或目前学历)，职称，是/否计算机学会(CCF)会员（提供会员号),主要研究领域为*****、****.E-mail: **************.\textsf{作者名2（通信作者)}，性别，xxxx年生，学位(或目前学历)，职称，是/否计算机学会(CCF)会员（提供会员号),主要研究领域为*****、****.E-mail: **************. \textsf{作者名3（通信作者)}，性别，xxxx年生，学位(或目前学历)，职称，是/否计算机学会(CCF)会员（提供会员号),主要研究领域为*****、****.E-mail: **************.(给出的电子邮件地址应不会因出国、毕业、更换工作单位等原因而变动。请给出所有作者的电子邮件)
-第1作者手机号码(投稿时必须提供，以便紧急联系，发表时会删除): … …, E-mail: … …*此部分6号宋体*}
+{\zihao{3}\fangsong 张丁文$^{1}$ \quad  梁正涛$^{1}$  \quad 朱伊丽$^{1}$ \quad  秦永彬$^{1}$ \quad  陈艳平$^{1}$ \quad 黄瑞章$^{1}$}
+\footnote{\noindent \zihao{6}\songti 收稿日期：\quad \quad -\quad -\quad ；
+%基金
+}
 
 \vspace {1mm}
 
-\zihao{6}{$^{1)}$(单位全名 部门(系)全名, 市(或直辖市) 国家名 邮政编码) *字体为6号宋体*单位}
+\zihao{6}{$^{1)}$贵州大学 计算机科学与技术与技术学院 贵阳  550004}
 
-\zihao{6}{$^{2)}$(单位全名 部门(系)全名, 市(或直辖市) 国家名 邮政编码)*中英文单位名称、作者姓名须一致*}
 
-\zihao{6}{$^{3)}$(单位全名 部门(系)全名, 市(或直辖市) 国家名 邮政编码)}
 
-\zihao{6}{\textsf{论文定稿后，作者署名、单位无特殊情况不能变更。若变更，须提交签章申请，国家为中国可以不写，省会城市不写省名，其他国家必须写国家名。}}
 }%中文标题、作者与注脚
 
 \vskip 5mm
@@ -109,28 +109,28 @@
 \zihao{5-}{
 \setlength{\baselineskip}{16pt}\selectfont{
 \noindent {\heiti 摘\quad 要\quad }
-*中文摘要内容置于此处(英文摘要中要有这些内容)，字体为小5号宋体。摘要贡献部分，要有数据支持，不要出现``...大大提高''、``...显著改善''等描述，正确的描述是``比{\ldots}提高X{\%}''、``在{\ldots}上改善X{\%}''。*摘要\par}}
+法律判决预测（LJP）是推动司法智能化的关键研究领域。然而，现有方法普遍面临挑战：传统模型因其“黑箱”特性和对复杂法律逻辑处理能力的不足而受到诟病；而直接应用大型语言模型（LLMs）则面临内容“幻觉”、缺乏专业法律知识等固有缺陷。为应对这些挑战，本文提出一种法律指导的类案融合判决方法。该方法将LJP任务分解为多个逻辑子任务：首先，利用LLM提取判决的核心要素；其次，通过检索增强生成（RAG）机制，并行地从法律条文库和历史案例库中获取法律规范与相似判例；最后，将多源信息输入LLM进行综合推理，生成结构化判决。
+本研究旨在通过为LLM提供明确的法律依据和司法实践参考，系统性地提升判决质量。实验结果表明，该方法在罪名和刑期预测任务上的F1分数分别达到了0.7743和0.5525。相较于同样结合了外部知识库的先进基准模型，F1分数分别提升了2.46和8.34个百分点。尤其在对司法实践经验有高度依赖的刑期预测上，性能提升显著。这证明了本方法通过有效融合多源异构知识，能够显著增强判决预测的准确性与可解释性，为构建更可靠、更透明的智能司法判决系统提供了新的解决方案。
+}}
 
 \vspace {5mm}
 
 \zihao{5-}{\noindent
-{\heiti 关键词 \quad }{*关键词（中文关键字与英文关键字对应且一致，应有5-7个关键词)；关键词；关键词；关键词*  }
+{\heiti 关键词 \quad }{大语言模型；检索增强生成；判决预测；智慧法院；}
 }\par\noindent
 \zihao{5-}{\heiti 中图法分类号\quad } TP\rm{\quad \quad \quad     }
 {\heiti DOI号:\quad } *投稿时不提供DOI号
 
 \vskip 5mm
 
+
 \begin{center}
-\zihao{3}{ \heiti Title *（中英文题目一致)字体为4号Times New Roman,加粗* Title}\\
+\zihao{3}{ \heiti Laws-Guided Precedent Case Fusion based-on LLM for Legal Prediction}\\
 \vspace {5mm}
-\zihao{5}{ NAME Name-Name$^{1)}$ NAME Name$^{2)}$ NAME Name-Name$^{3)}$ *字体为5号Times new Roman*Name}\\
+\zihao{5}{ Dingwen Zhang$^{1)}$ Zhentao liang$^{1)}$ Yili Zhu$^{1)}$ Yongben Qin$^{1)}$ Yanpin Chen$^{1)}$ Ruizhang Huang$^{1)}$}\\
 \vspace {1mm}
-\zihao{6}{{$^{1)}$(Department of ****, University, City ZipCode, China) *字体为6号Times new Roman* Depart.Correspond}}
+\zihao{6}{{$^{1)}$Department of Computer and Science, Guizhou University, Guiyang 550004}}
 
-\zihao{6}{{$^{2)}$(Department of ****, University, City ZipCode)*中国不写国家名*}}
-
-\zihao{6}{{$^{3)}$(Department of ****, University, City ZipCode, country)*外国写国家名*}}
 
 \end{center}
 
@@ -141,7 +141,7 @@
 \input{sec/2_related_work.tex}
 \input{sec/3_method.tex}
 \input{sec/4_expertment.tex}
-\input{sec/5_result.tex}
+\input{sec/5_conclusion.tex}
 \input{sec/9_bib.tex}
 \end{multicols}
 

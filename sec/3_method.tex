@@ -2,12 +2,12 @@
 \subsection{\heiti 总体流程}
 
 % \begin{multicols}{1}
-\begin{figure}[H]
+\begin{figure*}[htbp]
 	\centering
-	\includegraphics[width=1\linewidth]{fig/main.png}
+	\includegraphics[width=1\textwidth]{fig/method.pdf}
 	\caption{基于大语言模型，法律引导的的案例融合方法，用于司法判决预测流程}
 	\label{fig:main}
-\end{figure}
+\end{figure*}
 % \end{multicols}
 
 本研究提出的司法判决预测方法其核心在于构建一个能够有效整合案件事实、法律法规及类案判例的智能推理框架。整体流程如图\ref{fig:main}所示。
@@ -24,7 +24,7 @@
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=1\linewidth]{fig/prompt1.png}
+	\includegraphics[width=0.8\linewidth]{fig/prompt1.pdf}
 	\caption{提示词1}
 	\label{fig:prompt1}
 \end{figure}
@@ -32,22 +32,28 @@
 通过明确提取犯罪核心要素和证据核心要素，不仅优化了案件结构化理解的基础，也为后续的法律条文检索、司法三段论构建及判决文本生成提供了更为精准和逻辑严谨的输入，从而提升整个智能判决系统的透明度、准确性和与人类司法实践的一致性。
 \subsection{\heiti 相关法律条文检索}
 为了解决其在法律知识方面的不足和潜在的“幻觉”问题，相关法律条文检索通过引入真实的法律条文为大语言模型提供准确、权威的法律规范依据，确保模型在进行判决预测时，能够明确犯罪的构成要件、法律定义以及量刑的法定边界。首先构建一个包含各类法律法规的法律条文数据库（$DB_{law}$​）。数据库中的每条法律条文均通过文本嵌入模型转换为高维向量表示，并存入向量数据库以支持高效检索。当处理新的案件时，从案件事实描述$C$中提取的犯罪特征$F$（或其与法律相关的部分，如初步认定的罪名、关键情节等）同样被转换为查询向量embed($F$)。随后，系统采用近似最近邻（ANN）搜索算法，通过计算查询向量与数据库中法律条文向量之间的相似度（Sim，通常采用内积作为度量标准），检索出与案件最为相关的k条法律条文，形成集合L。该过程可表示为：
-$$
-L=(l_1​,l_2​,\dots,l_k​)=\text{Topk}​(\text{Sim}(embed(F),DB_{law})),
-$$
+\begin{equation}
+	\begin{aligned}
+		L & =(l_1​,l_2​,\dots,l_k​)                       \\
+		  & =\text{Topk}​(\text{Sim}(embed(F),DB_{law})),
+	\end{aligned}
+\end{equation}
 其中，$\text{Topk}​$表示取相似度最高的$k$个结果。
 \subsection{\heiti 相似案例检索}
 为了解决仅凭法条和案例描述难以覆盖所有复杂情况的问题，并促进“同案同判”， 本研究提出相似案例检索，在从历史判例中寻找与当前待审案件在核心特征上相似的案例，为大语言模型提供司法实践层面的参考。相似案例检索可以让LLM理解法律条文在具体情境下的应用方式，学习既往判决中蕴含的裁判经验和量刑酌情考量。
 
 首先，构建一个结构化的案例数据库。该数据库中的每个案例都包含详细的字段，如“罪名类别”、“犯罪构成”，量刑情节”、“证据特征”、“法律适用”、“裁判逻辑”和“判决结果”的案例。对于案例中的关键文本字段，特别是“罪名类别”、“犯罪构成”和“证据特征”，采用文本嵌入模型将其转换为向量表示，并构建相应的向量索引。需要检索相似案例时，针对当前案件提取的犯罪特征F中的对应字段（令检索字段集合为 $R=\{\text{罪名},\text{构成},\text{证据}\}$），即$F_{i}$​（其中 $i \in R$），分别将其通过相同的文本嵌入模型转换为查询向量$\text{embed}(F_{i})$。接着，对每一个查询向量，在案例数据库对应字段的向量索引中，利用近似最近邻搜索算法和相似度计算，各自独立检索出$m$个最相似的案例。
 为了得到与当前案件整体最为匹配的案例，需要对上述各字段检索出的候选案例进行综合评估。对于每一个候选案例$s_j$​，计算其与当前案件在R中所有字段上的平均相似度
-$$
-	\text{AvgSim}(s_j​)=\frac{1}{|R|}\sum_{i\in R}\text{​Sim}(\text{embed}(F_{i}​),\text{embed}(s_j,i)),
-$$
+{
+\small
+\begin{equation}
+    \text{AvgSim}(s_j) = \frac{1}{|R|} \sum_{i \in R} \text{Sim}\left( \text{embed}(F_i), \text{embed}(s_j, i) \right),
+\end{equation}
+}
 其中，$\text{embed}(s_j,i)$表示候选案例$s_j$​在特定字段$\text{i}$上的向量表示。最后，选取平均相似度最高的$n$个案例$(n<m)$作为最终的相似案例集合S
-$$
+\begin{equation}
 	S=(s_1​,s_2​,\dots,s_n​)=\text{Topn​}(AvgSim(s_j​))
-$$
+\end{equation}
 
 通过引入与当前案件高度相似的历史判例，为大语言模型提供了宝贵的经验性知识。这不仅有助于模型更准确地把握特定罪名的构成要件和量刑尺度，还能使其判决建议更贴近司法实践，增强判决结果的合理性和可接受性。
 
@@ -57,15 +63,16 @@ $$
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=1\linewidth]{fig/prompt2.png}
+	\includegraphics[width=0.8\linewidth]{fig/prompt2.pdf}
 	\caption{提示词2}
 	\label{fig:prompt2}
 \end{figure}
 
 这个提示被输入到预训练的LLM中。大语言模型利用其强大的自然语言理解、知识整合和逻辑推理能力，对这些输入信息进行深度分析和融合。模型在推理过程中，会考量法律条文L的规定（作为法律依据），并参考相似案例S中的裁判思路和判决结果（作为实践经验）。最终，大语言模型生成结构化的判决结果J，其内容通常包括建议的罪名、刑期、是否适用死刑或无期徒刑、相关的法律条文编号以及可能的罚金等。该过程可以概念化地表示为：
-$$
+
+\begin{equation}
 	J=\text{LLM}(C|F,S,L),
-$$
+\end{equation}
 其中，$C | F,S,L $表示以$F,S,L$为条件上下文信息，结合原始描述$C$进行判决。
 
 法律指导的类案融合判决通过整合多源数据和大语言模型的综合推理，实现了对案件事实、法律规范和司法判例的有效融合。它不仅提升了判决预测的准确性和专业性，还通过结合明确的法律条文和相似案例，增强了判决结果的可解释性和说服力。

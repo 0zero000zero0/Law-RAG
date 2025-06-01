@@ -1,4 +1,4 @@
-\begin{thebibliography}{5}
+\begin{thebibliography}{43}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{#1}
 \expandafter\ifx\csname urlstyle\endcsname\relax\else
@@ -11,31 +11,247 @@
   \let\eprint\href
 \fi
 
-\bibitem[ボハンデ(1928)]{Bohan1928}
-ボハンデ.
-\newblock 過去及び現在に於ける英国と会\allowbreak[J].
-\newblock 日本時報, 1928, 17: 5-9.
+\bibitem[Aletras et~al.(2016)Aletras, Tsarapatsanis, Preotiuc-Pietro, et~al.]{aletras2016predicting}
+ALETRAS N, TSARAPATSANIS D, PREOTIUC-PIETRO D, et~al.
+\newblock Predicting judicial decisions of the european court of human rights: A natural language processing perspective\allowbreak[J/OL].
+\newblock PeerJ computer science, 2016, 2: 93.
+\newblock DOI: \doi{10.7717/peerj-cs.93}.
 
-\bibitem[陈晋镳\ 等(1980)陈晋镳, 张惠民, 朱士兴, 赵震, and 王振刚]{chen1980zhongguo}
-陈晋镳, 张惠民, 朱士兴, 等.
-\newblock 蓟县震旦亚界研究\allowbreak[M]//\allowbreak
-中国地质科学院天津地质矿产研究所.
-\newblock 中国震旦亚界.
-\newblock 天津: 天津科学技术出版社, 1980: 56-114.
+\bibitem[Katz et~al.(2017)Katz, Bommarito, and Blackman]{katz2017general}
+KATZ D~M, BOMMARITO M~J, BLACKMAN J.
+\newblock A general approach for predicting the behavior of the supreme court of the united states\allowbreak[J].
+\newblock Plos One, 2017, 12\allowbreak (4): 0174698.
 
-\bibitem[Bravo et~al.(1990)Bravo and Olavarria]{bravo1990comparative}
-BRAVO H, OLAVARRIA J.
-\newblock Comparative study of visual inter and intrahemispheric cortico-cortical connections in five native chilean rodents\allowbreak[J].
-\newblock Anatomy and embryology, 1990, 181\allowbreak (1): 67-73.
+\bibitem[Keown(1980)]{keown1980mathematical}
+KEOWN R.
+\newblock Mathematical models for legal prediction, 2 computer l. j. 829 (1980)\allowbreak[J].
+\newblock UIC John Marshall Journal of Information Technology \& Privacy Law, 1980, 2\allowbreak (1): 29.
 
-\bibitem[牛志明\ 等(2013)牛志明, 斯温兰德, and 雷光春]{niu2013zonghe}
-牛志明, 斯温兰德, 雷光春.
-\newblock 综合湿地管理国际研讨会论文集\allowbreak[C].
-\newblock 北京: 海洋出版社, 2013.
+\bibitem[Boella et~al.(2011)Boella, Di~Caro, and Humphreys]{boella2011using}
+BOELLA G, DI~CARO L, HUMPHREYS L.
+\newblock Using classification to support legal knowledge engineers in the eunomos legal document management system\allowbreak[C]//\allowbreak
+Fifth International Workshop on Juris-informatics.
+\newblock 2011.
 
-\bibitem[袁训来\ 等(2012)袁训来, 陈哲, and 肖书海]{yuan2012lana}
-袁训来, 陈哲, 肖书海.
-\newblock 蓝田生物群: 一个认识多细胞生物起源和早期演化的新窗口 -- 篇一\allowbreak[J].
-\newblock 科学通报, 2012, 57\allowbreak (34): 3219.
+\bibitem[Kim et~al.(2015)Kim, Xu, and Goebel]{kim2015legal}
+KIM M, XU Y, GOEBEL R.
+\newblock Legal question answering using ranking svm and syntactic/semantic similarity\allowbreak[C]//\allowbreak
+New Frontiers in Artificial Intelligence.
+\newblock 2015: 244-258.
+
+\bibitem[Sulea et~al.(2017)Sulea, Zampieri, Malmasi, et~al.]{sulea2017exploring}
+SULEA O, ZAMPIERI M, MALMASI S, et~al.
+\newblock Exploring the use of text classification in the legal domain\allowbreak[C/OL]//\allowbreak
+Proc of the 2nd Workshop on Automated Semantic Analysis of Information in Legal Texts Co-located with the 16th Int Conf on Artificial Intelligence and Law.
+\newblock 2017.
+\newblock \url{https://ceur-ws.org/Vol-2143/paper5.pdf}.
+
+\bibitem[Jiang et~al.(2023)Jiang and Yang]{jiang2023legal}
+JIANG C, YANG X.
+\newblock Legal syllogism prompting: Teaching large language models for legal judgment prediction\allowbreak[C]//\allowbreak
+Proceedings of the Nineteenth International Conference on Artificial Intelligence and Law.
+\newblock 2023: 417-421.
+
+\bibitem[Lewis et~al.(2020)Lewis, Perez, Piktus, et~al.]{lewis2020retrieval}
+LEWIS P, PEREZ E, PIKTUS A, et~al.
+\newblock Retrieval-augmented generation for knowledge-intensive nlp tasks\allowbreak[J].
+\newblock Advances in Neural Information Processing Systems, 2020, 33: 9459-9474.
+
+\bibitem[Dahl et~al.(2024)Dahl, Magesh, Suzgun, and Ho]{Dahl_2024}
+DAHL M, MAGESH V, SUZGUN M, et~al.
+\newblock Large legal fictions: Profiling legal hallucinations in large language models\allowbreak[J/OL].
+\newblock Journal of Legal Analysis, 2024, 16\allowbreak (1): 64–93.
+\newblock \url{http://dx.doi.org/10.1093/jla/laae003}.
+
+\bibitem[Kort(1957)]{kort1957predicting}
+KORT F.
+\newblock Predicting supreme court decisions mathematically: A quantitative analysis of the “right to counsel” cases\allowbreak[J/OL].
+\newblock The American Political Science Review, 1957, 51\allowbreak (1): 1-12.
+\newblock DOI: \doi{10.2307/1951767}.
+
+\bibitem[Susskind(1986)]{susskind1986expert}
+SUSSKIND R.
+\newblock Expert systems in law: A jurisprudential approach to artificial intelligence and legal reasoning\allowbreak[J].
+\newblock The Modern Law Review, 1986, 49\allowbreak (2): 168-194.
+
+\bibitem[Deng et~al.(2023)Deng, Pei, Kong, et~al.]{deng2023syllogistic}
+DENG W, PEI J, KONG K, et~al.
+\newblock Syllogistic reasoning for legal judgment analysis\allowbreak[C]//\allowbreak
+Proceedings of the 2023 Conference on Empirical Methods in Natural Language Processing.
+\newblock 2023: 13997-14009.
+
+\bibitem[Chen et~al.(2013)Chen, Liu, and Ho]{chen2013text}
+CHEN Y, LIU Y, HO W.
+\newblock A text mining approach to assist the general public in the retrieval of legal documents\allowbreak[J].
+\newblock Journal of the American Society for Information Science and Technology, 2013, 64\allowbreak (2): 280-290.
+
+\bibitem[Gonçalves et~al.(2005)Gonçalves and Quaresma]{goncalves2005evaluating}
+GONçALVES T, QUARESMA P.
+\newblock Evaluating preprocessing techniques in a text classification problem\allowbreak[C]//\allowbreak
+Proceedings of the Conference of the Brazilian Computer Society.
+\newblock 2005.
+
+\bibitem[Kianmehr et~al.(2006)Kianmehr and Alhajj]{kianmehr2006crime}
+KIANMEHR K, ALHAJJ R.
+\newblock Crime hot-spots prediction using support vector machine\allowbreak[C]//\allowbreak
+IEEE International Conference on Computer Systems and Applications.
+\newblock 2006: 952-959.
+
+\bibitem[Cheng(2025)]{cheng2025legal}
+CHENG F~D.
+\newblock Legal consultation data and corpus from china law network: Replication data for design and research of text classification system\allowbreak[EB/OL].
+\newblock 2025.
+\newblock \url{https://doi.org/10.18170/DVN/OLO4G8}.
+
+\bibitem[Dong et~al.(2021)Dong and Niu]{dong2021legal}
+DONG Q, NIU S.
+\newblock Legal judgment prediction via relational learning\allowbreak[C]//\allowbreak
+Proc of the 44th Int ACM SIGIR Conf on Research and Development in Information Retrieval.
+\newblock New York: ACM, 2021: 983-992.
+
+\bibitem[Feng et~al.(2022)Feng, Li, and Vincent]{feng2022legal}
+FENG Y, LI C, VINCENT N.
+\newblock Legal judgment prediction via event extraction with constraints\allowbreak[C]//\allowbreak
+Proc of the 60th Annual Meeting of the Association for Computational Linguistics.
+\newblock Stroudsburg, PA: ACL, 2022: 648-664.
+
+\bibitem[Jiang et~al.(2018)Jiang, Ye, Luo, et~al.]{jiang2018interpretable}
+JIANG X, YE H, LUO Z, et~al.
+\newblock Interpretable rationale augmented charge prediction system\allowbreak[C]//\allowbreak
+Proc of the 27th Int Conf on Computational Linguistics.
+\newblock Stroudsburg, PA: ACL, 2018: 146-151.
+
+\bibitem[Huang et~al.(2019)Huang, He, Sun, et~al.]{huang2019improved}
+HUANG N, HE J, SUN J, et~al.
+\newblock Improved lawformer-based approach for forecasting crimes\allowbreak[J].
+\newblock Journal of Beijing University of Technology, 2019, 45\allowbreak (8): 742-748.
+
+\bibitem[Yue et~al.(2021)Yue, Liu, Jin, et~al.]{yue2021neurjudge}
+YUE L, LIU Q, JIN B, et~al.
+\newblock Neurjudge: A circumstance-aware neural framework for legal judgment prediction\allowbreak[C]//\allowbreak
+Proc of the 44th Int ACM SIGIR Conf on Research and Development in Information Retrieval.
+\newblock New York: ACM, 2021: 973-982.
+
+\bibitem[Liu et~al.(2019)Liu, Zhang, Zheng, et~al.]{liu2019multi}
+LIU Z~L, ZHANG M~S, ZHENG R~R, et~al.
+\newblock Multi-task learning model for legal judgment predictions with charge keywords\allowbreak[J].
+\newblock Journal of Tsinghua University (Science and Technology), 2019, 59\allowbreak (7): 497-504.
+
+\bibitem[Liu et~al.(2021)Liu, Ott, Goyal, et~al.]{liu2021robustly}
+LIU Y, OTT M, GOYAL N, et~al.
+\newblock A robustly optimized bert pre-training approach with post-training\allowbreak[C]//\allowbreak
+China National Conference on Chinese Computational Linguistics.
+\newblock Cham: Springer International Publishing, 2021: 471-484.
+
+\bibitem[Chalkidis et~al.(2020)Chalkidis, Fergadiotis, Malakasiotis, et~al.]{chalkidis2020legal}
+CHALKIDIS I, FERGADIOTIS M, MALAKASIOTIS P, et~al.
+\newblock Legal-bert: Preparing the muppets for court\allowbreak[C]//\allowbreak
+Proc of the 2020 Conf on Empirical Methods in Natural Language Processing.
+\newblock Stroudsburg, PA: ACL, 2020: 2898-2904.
+
+\bibitem[Deepa(2021)]{deepa2021bidirectional}
+DEEPA M.
+\newblock Bidirectional encoder representations from transformers (bert) language model for sentiment analysis task\allowbreak[J].
+\newblock Turkish Journal of Computer and Mathematics Education (TURCOMAT), 2021, 12\allowbreak (7): 1708-1721.
+
+\bibitem[Devlin et~al.(2019)Devlin, Chang, Lee, et~al.]{devlin2019bert}
+DEVLIN J, CHANG M, LEE K, et~al.
+\newblock Bert: Pre-training of deep bidirectional transformers for language understanding\allowbreak[C]//\allowbreak
+Proceedings of the 2019 Conference of the North American Chapter of the Association for Computational Linguistics.
+\newblock 2019: 4171-4186.
+
+\bibitem[Fan et~al.(2022)Fan and Wang]{fan2022multi}
+FAN A~M, WANG Y~C.
+\newblock Multi task intelligent legal judgment method based on bert model\allowbreak[J].
+\newblock Microelectronics \& Computer, 2022, 39\allowbreak (9): 107-114.
+
+\bibitem[Xiao et~al.(2021)Xiao, Hu, Liu, et~al.]{xiao2021lawformer}
+XIAO C, HU X, LIU Z, et~al.
+\newblock Lawformer: A pre-trained language model for chinese legal long documents\allowbreak[J/OL].
+\newblock Al Open, 2021, 2: 79-84.
+\newblock DOI: \doi{10.1016/j.aiopen.2021.06.003}.
+
+\bibitem[Du et~al.(2022)Du, Qian, Liu, et~al.]{du2022glm}
+DU Z, QIAN Y, LIU X, et~al.
+\newblock Glm: General language model pretraining with autoregressive blank infilling\allowbreak[C]//\allowbreak
+Proceedings of the 60th Annual Meeting of the Association for Computational Linguistics.
+\newblock 2022: 320-335.
+
+\bibitem[Fei et~al.(2023)Fei, Shen, Zhu, et~al.]{fei2023lawbench}
+FEI Z, SHEN X, ZHU D, et~al.
+\newblock Lawbench: Benchmarking legal knowledge of large language models\allowbreak[A].
+\newblock 2023.
+
+\bibitem[Cui et~al.(2021)Cui, Che, Liu, et~al.]{cui2021pre}
+CUI Y, CHE W, LIU T, et~al.
+\newblock Pre-training with whole word masking for chinese bert\allowbreak[J/OL].
+\newblock IEEE/ACM Transactions on Audio, Speech, and Language Processing, 2021, 29: 3504-3514.
+\newblock DOI: \doi{10.1109/TASLP.2021.3124365}.
+
+\bibitem[Houlsby et~al.(2019)Houlsby, Giurgiu, Jastrzebski, et~al.]{houlsby2019parameter}
+HOULSBY N, GIURGIU A, JASTRZEBSKI S, et~al.
+\newblock Parameter-efficient transfer learning for nlp\allowbreak[C]//\allowbreak
+Proceedings of the 36th International Conference on Machine Learning.
+\newblock PMLR, 2019: 2790-2799.
+
+\bibitem[Hu et~al.(2018)Hu, Li, Tu, et~al.]{hu2018few}
+HU Z, LI X, TU C, et~al.
+\newblock Few-shot charge prediction with discriminative legal attributes\allowbreak[C]//\allowbreak
+Proc of the 27th Int Conf on Computational Linguistics.
+\newblock Stroudsburg, PA: ACL, 2018: 487-498.
+
+\bibitem[Brown et~al.(2020)Brown, Mann, Ryder, et~al.]{brown2020language}
+BROWN T, MANN B, RYDER N, et~al.
+\newblock Language models are few-shot learners\allowbreak[J].
+\newblock Advances in Neural Information Processing Systems, 2020, 33: 1877-1901.
+
+\bibitem[Huang et~al.(2022)Huang and Chang]{huang2022towards}
+HUANG J, CHANG K.
+\newblock Towards reasoning in large language models: A survey\allowbreak[A].
+\newblock 2022.
+
+\bibitem[Kojima et~al.(2022)Kojima, Gu, Reid, et~al.]{kojima2022large}
+KOJIMA T, GU S, REID M, et~al.
+\newblock Large language models are zero-shot reasoners\allowbreak[J].
+\newblock Advances in Neural Information Processing Systems, 2022, 35: 22199-22213.
+
+\bibitem[Izacard et~al.(2021)Izacard and Grave]{izacard2021leveraging}
+IZACARD G, GRAVE E.
+\newblock Leveraging passage retrieval with generative models for open domain question answering\allowbreak[C]//\allowbreak
+Proc of the 16th Conf of the European Chapter of the Association for Computational Linguistics.
+\newblock Stroudsburg, PA: ACL, 2021: 874-880.
+
+\bibitem[Huang et~al.(2023)Huang, Tao, Zhang, et~al.]{huang2023lawyer}
+HUANG Q, TAO M, ZHANG C, et~al.
+\newblock Lawyer llama technical report\allowbreak[A].
+\newblock 2023.
+
+\bibitem[Chen et~al.(2020)Chen, Hou, Cui, et~al.]{chen2020recall}
+CHEN S, HOU Y, CUI Y, et~al.
+\newblock Recall and learn: Fine-tuning deep pretrained language models with less forgetting\allowbreak[C]//\allowbreak
+Proceedings of the 2020 Conference on Empirical Methods in Natural Language Processing.
+\newblock 2020: 7870-7881.
+
+\bibitem[Cui et~al.(2023)Cui, Shen, and Wen]{cui2023survey}
+CUI J, SHEN X, WEN S.
+\newblock A survey on legal judgment prediction: Datasets, metrics, models and challenges\allowbreak[J].
+\newblock IEEE Access, 2023, 11: 102050-102071.
+
+\bibitem[Hu et~al.(2021)Hu, Shen, Wallis, et~al.]{hu2021lora}
+HU E~J, SHEN Y, WALLIS P, et~al.
+\newblock Lora: Low-rank adaptation of large language models\allowbreak[A].
+\newblock 2021.
+
+\bibitem[Hu et~al.(2022)Hu, Shen, Wallis, et~al.]{hu2022lora}
+HU E, SHEN Y, WALLIS P, et~al.
+\newblock Lora: Low-rank adaptation of large language models\allowbreak[C/OL]//\allowbreak
+Proc of the 10th Intl Conf on Learning Representations.
+\newblock 2022.
+\newblock \url{https://openreview.net/forum?id=nZeVKeeFYf9}.
+
+\bibitem[Li et~al.(2021)Li and Liang]{li2021prefix}
+LI X~L, LIANG P.
+\newblock Prefix-tuning: Optimizing continuous prompts for generation\allowbreak[A].
+\newblock 2021.
 
 \end{thebibliography}

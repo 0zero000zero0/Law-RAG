@@ -32,9 +32,8 @@
 %===============================%
 
 %=======设置奇偶页页眉=======%
-\headevenname{\mbox{\quad} \hfill  \mbox{\zihao{-5}{计\quad \quad 算\quad \quad 机\quad \quad 学\quad \quad 报} \hspace {50mm} \mbox{2025 年}}}%
-\headoddname{? 期 \hfill
-作者姓名等：论文题目}
+\headevenname{\mbox{\quad} \hfill  \mbox{\zihao{-5}{基于法条约束与类案融合的可解释司法判决预测方法} \hspace {50mm} \mbox{2025 年}}}%
+\headoddname{ \hfill 基于法条约束与类案融合的可解释司法判决预测方法}
 %=======设置奇偶页页眉=======%
 
 \renewcommand{\thefootnote}{\fnsymbol{footnote}}
@@ -76,9 +75,9 @@
 \onecolumn
 \noindent\begin{tabular}{p{168mm}}
 \zihao{5-}
-第??卷\quad 第?期 \hfill 计\quad 算\quad 机\quad 学\quad 报\hfill Vol. ??  No. ?\\
+% 第??卷\quad 第?期 \hfill 计\quad 算\quad 机\quad 学\quad 报\hfill Vol. ??  No. ?\\
 \zihao{5-}
-20??年?月 \hfill CHINESE JOURNAL OF COMPUTERS \hfill ???. 20??\\
+\hfill 基于法条约束与类案融合的可解释司法判决预测方法 \hfill 2025年6月 \\
 \hline\\[-5.5mm]
 \hline\end{tabular}\end{table*}
 %=======设置首页页眉=======%
@@ -87,26 +86,30 @@
 {
 \centering
 \vspace {11mm}
-{\zihao{2} \heiti 基于大语言模型, 法律引导的的案例融合方法, 用于司法判决预测 }
+{\zihao{2} \heiti 基于法条约束与类案融合的\\可解释司法判决预测方法}
 
 \vskip 5mm
 
-{\zihao{3}\fangsong 张丁文$^{1}$\quad 梁正涛$^{1}$\quad 朱伊丽$^{1}$\quad 秦永彬$^{1}$\quad 陈艳平$^{1}$\quad 黄瑞章$^{1}$}
+% {\zihao{5}\fangsong 张丁文$^{1,\dagger}$\quad 梁正涛$^{1,\dagger}$\quad 朱伊丽$^{1}$\quad 张华$^{1}$\quad 黄瑞章$^{1,2,3,*}$\quad 秦永彬$^{1,2,3,*}$}
+% \footnote{\noindent \zihao{6}\songti
 
-\footnote{\noindent \zihao{6}\songti
-% 收稿日期：\quad \quad -\quad -\quad ；
-%基金
-基金项目
-\\
-作者简介：黄瑞章
-}
+% $\dagger$两位作者都对论文做出了同样的贡献。
 
-\vspace {1mm}
+% \textbf{基金项目}：国家自然科学基金资助项目(62066008)；贵州省科学技术基金重点资助项目([2024]003)；“SRT”计划。([2024SRT203])
 
-\zihao{6}{$^{1)}$贵州大学 计算机科学与技术与技术学院 贵阳  550004}
+% \textbf{作者简介}：张丁文（2003-），男，贵州贵阳人，本科生；梁正涛（2003-），男，贵州贵阳人，本科生；朱伊丽（2003-），女，浙江台州，本科生；张华（2003-），男，云南昭通；黄瑞章（1979—），女，天津人，教授，博士，CCF 会员，主要研究方向：大数据、数据挖掘、信息提取；秦永彬（1980 —），男，山东烟台人，教授，博士，CCF 高级会员，主要研究方向：大数据管理与应用、多源数据融合。
 
+% \textbf{$^{*}$通讯作者}：黄瑞章（\href{cse.rzhuang@gzu.edu.cn}{cse.rzhuang@gzu.edu.cn}）； 秦永彬（\href{ybqin@gzu.edu.cn}{ybqin@gzu.edu.cn}）；
+% }
 
+% \vspace {1mm}
+% \begin{center}
+%   \zihao{6}{$^{1}$ 计算机科学与技术与技术学院(贵州保密学院)，贵阳，550004}
 
+%   \zihao{6}{$^{2}$公共大数据国家重点实验室() ，贵阳，550004}
+
+%   \zihao{6}{$^{3}$ 文本计算与认知智能教育部工程研究中心，贵阳，550004}
+% \end{center}
 }%中文标题、作者与注脚
 
 \vskip 5mm
@@ -114,30 +117,22 @@
 \zihao{5-}{
 \setlength{\baselineskip}{16pt}\selectfont{
 \noindent {\heiti 摘\quad 要\quad }
-法律判决预测是推动司法智能化的关键研究领域。然而，现有方法普遍面临挑战：传统模型因其“黑箱”特性和对复杂法律逻辑处理能力的不足而受到诟病；而直接应用大语言模型则面临内容“幻觉”、缺乏专业法律知识等固有缺陷。为应对这些挑战，本文提出一种法律指导的类案融合判决方法。该方法将LJP任务分解为多个逻辑子任务：首先，利用大语言模型提取判决的核心要素；其次，通过检索增强生成机制，并行地从法律条文库和历史案例库中获取法律规范与相似判例；最后，将多源信息输入大语言模型进行综合推理，生成结构化判决。
-本研究旨在通过为大语言模型提供明确的法律依据和司法实践参考，系统性地提升判决质量。实验结果表明，该方法在罪名和刑期预测任务上的F1分数分别达到了0.7743和0.5525。相较于同样结合了外部知识库的先进基准模型，F1分数分别提升了2.46\%和8.34\%。这证明了本方法通过有效融合多源异构知识，能够显著增强判决预测的准确性与可解释性，为构建更可靠、更透明的智能司法判决系统提供了新的解决方案。
-}}
+法律判决预测是推动司法智能化的关键研究领域。然而，当前大语言模型（LLM）在法律判决预测任务中面临显著挑战：它们在未经过专门法律知识强化的情况下，主要依赖于模型自身的固有知识进行推理，这导致其在处理复杂法律案件时容易产生“幻觉”，生成不符合法律事实或逻辑的判决，并且缺乏对专业法律知识的深度理解与精确应用能力，从而严重制约了LLM在司法实践中的可靠性与可解释性。
+为克服上述挑战，本文提出一种基于法条约束与类案融合的可解释司法判决预测方法。该方法旨在通过构建一套系统性的外部法律知识引导机制，显著提升LLM在法律判决预测任务中的性能和透明度。具体而言，本方法将判决预测（LJP）任务解构为以下核心逻辑子任务：首先，利用LLM强大的文本理解能力，精准地从案件描述中抽取并识别判决所需的关键事实要素和争议焦点；其次，通过检索增强生成（RAG）机制，并行地从精心构建的专业法律条文库中检索并引用相关法律规范与条款，同时从海量的历史判例库中获取与当前案件高度相似的裁判文书与量刑依据，确保判决的法律依据充分性和实践参考性；最后，将这些从多源异构知识库中获取的法律条文、相似判例与原始案件要素一同输入LLM进行综合推理与论证，从而生成结构化、具有法律效力且可解释的判决结果。
+本研究旨在通过为大语言模型提供明确的法律依据和司法实践参考，系统性地提升判决质量。实验结果表明，该方法在罪名预测和刑期预测任务上的F1分数分别达到0.7743和0.5525，相较于同样尝试结合外部知识库的先进基准模型，F1分数分别提升了2.46\%和8.34\%。这充分验证了本方法通过有效融合多源异构知识，能够显著增强判决预测的准确性。
+}
+}
 
 \vspace {5mm}
 
 \zihao{5-}{\noindent
 {\heiti 关键词 \quad }{大语言模型；检索增强生成；判决预测；智慧法院；}
 }\par\noindent
-\zihao{5-}{\heiti 中图法分类号\quad } TP\rm{\quad \quad \quad     }
-{\heiti DOI号:\quad } *投稿时不提供DOI号
-
+% \zihao{5-}{\heiti 中图法分类号\quad } TP\rm{\quad \quad \quad     }
+% {\heiti DOI号:\quad }
 \vskip 5mm
 
 
-\begin{center}
-\zihao{3}{ \heiti Laws-Guided Precedent Case Fusion based-on LLM for Legal Prediction}\\
-\vspace {5mm}
-\zihao{5}{ Dingwen Zhang$^{1}$\quad Zhentao Liang$^{1}$\quad Yili Zhu$^{1}$\quad Yongbin Qin$^{1}$\quad Yanping Chen$^{1}$\quad  Ruizhang Huang$^{1}$}\\
-\vspace {1mm}
-\zihao{6}{{$^{1}$Department of Computer and Science, Guizhou University, Guiyang 550004}}
-
-
-\end{center}
 
 \input{sec/0_abstract}
 

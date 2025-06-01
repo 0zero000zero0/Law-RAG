@@ -1,14 +1,31 @@
+\begin{center}
+	\zihao{3}{ \heiti Explainable Judicial Outcome Prediction: A Legal Provision-Constrained and Case-Based Fusion Framework}\\
+	% \vspace {5mm}
+	% \zihao{5}{ Dingwen Zhang$^{1,\dagger}$\quad Zhentao Liang$^{1,\dagger}$\quad Yili Zhu$^{1}$\quad Hua Zhang$^{1}$\quad Yongbin Qin$^{1,2,3}$\quad  Ruizhang Huang$^{1,2,3}$}
+
+    % \vspace {1mm}
+
+	% \zihao{6}{{$^{1}$Department of Computer and Science, Guizhou University, Guiyang, 550004}}
+
+	% \zihao{6}{{$^{2}$State Key Laboratory of Public Big Data (Guizhou University), Guiyang, 550004}}
+
+	% \zihao{6}{{$^{3}$Text Computing \& Cognitive Intelligence Engineering Research Center of National Education Ministry, Guizhou University, Guiyang, 550004}}
+\end{center}
+
 \zihao{5}{
-{\noindent\bf Abstract}\quad
-%英文摘要
-\zihao{5}{\noindent Legal Judgment Prediction is a critical research area for advancing judicial intelligence. However, existing methods face significant challenges. Traditional models are often criticized for their black-box nature and inability to handle complex legal logic, while the direct application of Large Language Models (LLM) is plagued by inherent flaws such as content hallucinations and a lack of domain-specific legal knowledge. To address these issues, this paper proposes a law-guided case fusion judgment method. This approach decomposes the LJP task into several logical sub-tasks: first, it leverages an LLM to extract core adjudicative elements; second, it employs a Retrieval-Augmented Generation mechanism to concurrently retrieve authoritative legal statutes and highly similar precedents; finally, it inputs this multi-source information into an LLM for comprehensive reasoning to generate a structured judgment.
-This research aims to systematically improve prediction quality by providing the LLM with explicit legal grounding and practical judicial references. Experimental results demonstrate that our method achieves F1-scores of 0.7743 and 0.5525 on charge and sentencing prediction tasks, respectively. Compared to an advanced baseline model that also utilizes RAG, our approach shows improvements of 2.46\% and 8.34\%. This validates that our method, by effectively fusing multi-source heterogeneous knowledge, can significantly enhance the accuracy and interpretability of LJP, offering a novel solution for building more reliable and transparent intelligent judicial systems.
-\par}}
+	{\noindent\bf Abstract}\quad
+	%英文摘要
+	\zihao{5}{\noindent
+		Judicial judgment prediction plays a crucial role in advancing the intelligence of legal systems. However, current large language models (LLMs) face significant challenges in this domain. Without specialized reinforcement of legal knowledge, these models primarily rely on their internal representations for reasoning, which often leads to "hallucinations" — generating decisions that are inconsistent with legal facts or logic. Moreover, such models lack deep understanding and precise application of professional legal knowledge, severely limiting their reliability and explainability in real-world judicial applications.
+        To address these challenges, this paper proposes an explainable judicial judgment prediction method based on legal provision constraints and case fusion . The method aims to significantly enhance the performance and transparency of LLMs in legal judgment prediction tasks by constructing a systematic external legal knowledge guidance framework. Specifically, we decompose the Legal Judgment Prediction (LJP) task into a set of logically structured subtasks. First, leveraging the strong textual comprehension capabilities of LLMs, we accurately extract and identify key factual elements and dispute points from case descriptions. Second, through a Retrieval-Augmented Generation (RAG) mechanism, we simultaneously retrieve relevant legal provisions from a curated legal statute database and locate highly similar precedents from a large-scale historical case repository. This ensures both the legal grounding and practical relevance of the judgment. Finally, the retrieved statutes, analogous cases, and original case facts are jointly fed into the LLM for comprehensive reasoning and argumentation, resulting in structured, legally binding, and interpretable judgment outputs.
+
+		By equipping LLMs with explicit legal foundations and judicial references, our approach systematically improves the quality of judicial predictions. Experimental results demonstrate that the proposed method achieves F1 scores of 0.7743 and 0.5525 on charge prediction and sentencing prediction tasks, respectively. Compared with state-of-the-art baseline models that also incorporate external knowledge, our method improves the F1 scores by 2.46\% and 8.3\% , respectively. These results validate the effectiveness of our multi-source heterogeneous knowledge fusion strategy in significantly enhancing the accuracy of judicial decision prediction.
+	}}
 
 \vspace {5mm}
 
 \zihao{5-}{\noindent
-{\heiti Key words \quad }{Large Language Models; Retrieval-Augmention Generation; Judgment Prediction; Smart Courts;}
+	{\heiti Key words\quad}{Large Language Models; Retrieval-Augmention Generation; Judgment Prediction; Smart Courts;}
 }\par\noindent
 
 \zihao{5}

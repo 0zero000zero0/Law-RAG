@@ -282,6 +282,11 @@ LI X~L, LIANG P.
 \newblock Prefix-tuning: Optimizing continuous prompts for generation\allowbreak[A].
 \newblock 2021.
 
+\bibitem[丛颖男\ 等(2025)丛颖男, 韩林睿, 马佳羽, and 朱金清]{JSJA202505027}
+丛颖男, 韩林睿, 马佳羽, 等.
+\newblock 基于大语言模型的刑事案件智能判决研究\allowbreak[J].
+\newblock 计算机科学, 2025, 52\allowbreak (05): 248-259.
+
 \bibitem[Xiao et~al.(2018)Xiao, Zhong, Guo, Tu, Liu, Sun, Feng, Han, Hu, Wang, and Xu]{xiao2018cail2018largescalelegaldataset}
 XIAO C, ZHONG H, GUO Z, et~al.
 \newblock Cail2018: A large-scale legal dataset for judgment prediction\allowbreak[A/OL].
@@ -324,10 +329,5 @@ SUN M, LI S, ZHANG Y, et~al.
 \newblock Proceedings of the 19th Chinese National Conference on Computational Linguistics.
 \newblock Haikou, China: Chinese Information Processing Society of China, 2020: 1132-1142.
 \newblock \url{https://aclanthology.org/2020.ccl-1.105/}.
-
-\bibitem[丛颖男\ 等(2025)丛颖男, 韩林睿, 马佳羽, and 朱金清]{JSJA202505027}
-丛颖男, 韩林睿, 马佳羽, 等.
-\newblock 基于大语言模型的刑事案件智能判决研究\allowbreak[J].
-\newblock 计算机科学, 2025, 52\allowbreak (05): 248-259.
 
 \end{thebibliography}

@@ -32,7 +32,7 @@
 %===============================%
 
 %=======设置奇偶页页眉=======%
-\headevenname{\mbox{\quad} \hfill  \mbox{\zihao{-5}{计\quad \quad 算\quad \quad 机\quad \quad 学\quad \quad 报} \hspace {50mm} \mbox{2023 年}}}%
+\headevenname{\mbox{\quad} \hfill  \mbox{\zihao{-5}{计\quad \quad 算\quad \quad 机\quad \quad 学\quad \quad 报} \hspace {50mm} \mbox{2025 年}}}%
 \headoddname{? 期 \hfill
 作者姓名等：论文题目}
 %=======设置奇偶页页眉=======%
@@ -91,9 +91,14 @@
 
 \vskip 5mm
 
-{\zihao{3}\fangsong 张丁文$^{1}$ \quad  梁正涛$^{1}$  \quad 朱伊丽$^{1}$ \quad  秦永彬$^{1}$ \quad  陈艳平$^{1}$ \quad 黄瑞章$^{1}$}
-\footnote{\noindent \zihao{6}\songti 收稿日期：\quad \quad -\quad -\quad ；
+{\zihao{3}\fangsong 张丁文$^{1}$\quad 梁正涛$^{1}$\quad 朱伊丽$^{1}$\quad 秦永彬$^{1}$\quad 陈艳平$^{1}$\quad 黄瑞章$^{1}$}
+
+\footnote{\noindent \zihao{6}\songti
+% 收稿日期：\quad \quad -\quad -\quad ；
 %基金
+基金项目
+\\
+作者简介：黄瑞章
 }
 
 \vspace {1mm}
@@ -109,8 +114,8 @@
 \zihao{5-}{
 \setlength{\baselineskip}{16pt}\selectfont{
 \noindent {\heiti 摘\quad 要\quad }
-法律判决预测（LJP）是推动司法智能化的关键研究领域。然而，现有方法普遍面临挑战：传统模型因其“黑箱”特性和对复杂法律逻辑处理能力的不足而受到诟病；而直接应用大型语言模型（LLM）则面临内容“幻觉”、缺乏专业法律知识等固有缺陷。为应对这些挑战，本文提出一种法律指导的类案融合判决方法。该方法将LJP任务分解为多个逻辑子任务：首先，利用LLM提取判决的核心要素；其次，通过检索增强生成（RAG）机制，并行地从法律条文库和历史案例库中获取法律规范与相似判例；最后，将多源信息输入LLM进行综合推理，生成结构化判决。
-本研究旨在通过为LLM提供明确的法律依据和司法实践参考，系统性地提升判决质量。实验结果表明，该方法在罪名和刑期预测任务上的F1分数分别达到了0.7743和0.5525。相较于同样结合了外部知识库的先进基准模型，F1分数分别提升了2.46和8.34个百分点。尤其在对司法实践经验有高度依赖的刑期预测上，性能提升显著。这证明了本方法通过有效融合多源异构知识，能够显著增强判决预测的准确性与可解释性，为构建更可靠、更透明的智能司法判决系统提供了新的解决方案。
+法律判决预测是推动司法智能化的关键研究领域。然而，现有方法普遍面临挑战：传统模型因其“黑箱”特性和对复杂法律逻辑处理能力的不足而受到诟病；而直接应用大语言模型则面临内容“幻觉”、缺乏专业法律知识等固有缺陷。为应对这些挑战，本文提出一种法律指导的类案融合判决方法。该方法将LJP任务分解为多个逻辑子任务：首先，利用大语言模型提取判决的核心要素；其次，通过检索增强生成机制，并行地从法律条文库和历史案例库中获取法律规范与相似判例；最后，将多源信息输入大语言模型进行综合推理，生成结构化判决。
+本研究旨在通过为大语言模型提供明确的法律依据和司法实践参考，系统性地提升判决质量。实验结果表明，该方法在罪名和刑期预测任务上的F1分数分别达到了0.7743和0.5525。相较于同样结合了外部知识库的先进基准模型，F1分数分别提升了2.46\%和8.34\%。这证明了本方法通过有效融合多源异构知识，能够显著增强判决预测的准确性与可解释性，为构建更可靠、更透明的智能司法判决系统提供了新的解决方案。
 }}
 
 \vspace {5mm}
@@ -127,9 +132,9 @@
 \begin{center}
 \zihao{3}{ \heiti Laws-Guided Precedent Case Fusion based-on LLM for Legal Prediction}\\
 \vspace {5mm}
-\zihao{5}{ Dingwen Zhang$^{1)}$ Zhentao liang$^{1)}$ Yili Zhu$^{1)}$ Yongben Qin$^{1)}$ Yanpin Chen$^{1)}$ Ruizhang Huang$^{1)}$}\\
+\zihao{5}{ Dingwen Zhang$^{1}$\quad Zhentao Liang$^{1}$\quad Yili Zhu$^{1}$\quad Yongbin Qin$^{1}$\quad Yanping Chen$^{1}$\quad  Ruizhang Huang$^{1}$}\\
 \vspace {1mm}
-\zihao{6}{{$^{1)}$Department of Computer and Science, Guizhou University, Guiyang 550004}}
+\zihao{6}{{$^{1}$Department of Computer and Science, Guizhou University, Guiyang 550004}}
 
 
 \end{center}
@@ -146,51 +151,52 @@
 \end{multicols}
 
 \begin{multicols}{1}
-\noindent {\zihao{5}\bf{附录X}.}
 
-{\zihao{5-}\setlength\parindent{2em}
-*\textbf{附录内容}置于此处，字体为小5号宋体。附录内容包括：\textbf{详细的定理证明、公式推导、原始数据}等*}\\\\
+% \noindent {\zihao{5}\bf{附录X}.}
 
-\end{multicols}
+% {\zihao{5-}\setlength\parindent{2em}
+% *\textbf{附录内容}置于此处，字体为小5号宋体。附录内容包括：\textbf{详细的定理证明、公式推导、原始数据}等*}\\\\
 
-
-\begin{multicols}{1}
-\begin{biography}[yourphotofilename.jpg]
-\noindent
-\textbf{First A. Author}\ \ *计算机学报第1作者提供照片电子图片，尺寸为1寸。英文作者介绍内容包括：出生年,学位(或目前学历),职称,主要研究领域(\textbf{与中文作者介绍中的研究方向一致}).*
-*字体为小5号Times New Roman*
-\end{biography}
-
-\begin{biography}[yourphotofilename.jpg]
-\noindent
-\textbf{Second B. Author} *英文作者介绍内容包括：出生年,学位(或目前学历),职称,主要研究领域(\textbf{与中文作者介绍中的研究方向一致})。*
-*字体为小5号Times New Roman*
-\end{biography}
-\end{multicols}
+% \end{multicols}
 
 
-\begin{multicols}{1}
-\zihao{5}
-\noindent \textbf{Background}
+% \begin{multicols}{1}
+% \begin{biography}[yourphotofilename.jpg]
+% \noindent
+% \textbf{First A. Author}\ \ *计算机学报第1作者提供照片电子图片，尺寸为1寸。英文作者介绍内容包括：出生年,学位(或目前学历),职称,主要研究领域(\textbf{与中文作者介绍中的研究方向一致}).*
+% *字体为小5号Times New Roman*
+% \end{biography}
 
-\zihao{5-}{
-\setlength\parindent{2em}
-*论文背景介绍为\textbf{英文}，字体为小5号Times New Roman体*
+% \begin{biography}[yourphotofilename.jpg]
+% \noindent
+% \textbf{Second B. Author} *英文作者介绍内容包括：出生年,学位(或目前学历),职称,主要研究领域(\textbf{与中文作者介绍中的研究方向一致})。*
+% *字体为小5号Times New Roman*
+% \end{biography}
+% \end{multicols}
 
-论文后面为400单词左右的英文背景介绍。介绍的内容包括：
 
-本文研究的问题属于哪一个领域的什么问题。该类问题目前国际上解决到什么程度。
+% \begin{multicols}{1}
+% \zihao{5}
+% \noindent \textbf{Background}
 
-本文将问题解决到什么程度。
+% \zihao{5-}{
+% \setlength\parindent{2em}
+% *论文背景介绍为\textbf{英文}，字体为小5号Times New Roman体*
 
-课题所属的项目。
+% 论文后面为400单词左右的英文背景介绍。介绍的内容包括：
 
-项目的意义。
+% 本文研究的问题属于哪一个领域的什么问题。该类问题目前国际上解决到什么程度。
 
-本研究群体以往在这个方向上的研究成果。
+% 本文将问题解决到什么程度。
 
-本文的成果是解决大课题中的哪一部分，如果涉及863$\backslash
-$973以及其项目、基金、研究计划，注意这些项目的英文名称应书写正确。}
+% 课题所属的项目。
+
+% 项目的意义。
+
+% 本研究群体以往在这个方向上的研究成果。
+
+% 本文的成果是解决大课题中的哪一部分，如果涉及863$\backslash
+% $973以及其项目、基金、研究计划，注意这些项目的英文名称应书写正确。}
 
 \end{multicols}
 \end{document}

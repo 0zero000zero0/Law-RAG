@@ -136,6 +136,12 @@ DENG W, PEI J, KONG K, et~al.
 Proceedings of the 2023 Conference on Empirical Methods in Natural Language Processing.
 \newblock 2023: 13997-14009.
 
+\bibitem[Dong et~al.(2021)Dong and Niu]{dong2021legal}
+DONG Q, NIU S.
+\newblock Legal judgment prediction via relational learning\allowbreak[C]//\allowbreak
+Proc of the 44th Int ACM SIGIR Conf on Research and Development in Information Retrieval.
+\newblock New York: ACM, 2021: 983-992.
+
 \bibitem[Chen et~al.(2013)Chen, Liu, and Ho]{chen2013text}
 CHEN Y, LIU Y, HO W.
 \newblock A text mining approach to assist the general public in the retrieval of legal documents\allowbreak[J].
@@ -158,12 +164,6 @@ CHENG F~D.
 \newblock Legal consultation data and corpus from china law network: Replication data for design and research of text classification system\allowbreak[EB/OL].
 \newblock 2025.
 \newblock \url{https://doi.org/10.18170/DVN/OLO4G8}.
-
-\bibitem[Dong et~al.(2021)Dong and Niu]{dong2021legal}
-DONG Q, NIU S.
-\newblock Legal judgment prediction via relational learning\allowbreak[C]//\allowbreak
-Proc of the 44th Int ACM SIGIR Conf on Research and Development in Information Retrieval.
-\newblock New York: ACM, 2021: 983-992.
 
 \bibitem[Feng et~al.(2022)Feng, Li, and Vincent]{feng2022legal}
 FENG Y, LI C, VINCENT N.

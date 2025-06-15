@@ -1,4 +1,4 @@
-\begin{thebibliography}{81}
+\begin{thebibliography}{79}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{#1}
 \expandafter\ifx\csname urlstyle\endcsname\relax\else
@@ -45,17 +45,6 @@ SULEA O, ZAMPIERI M, MALMASI S, et~al.
 Proc of the 2nd Workshop on Automated Semantic Analysis of Information in Legal Texts Co-located with the 16th Int Conf on Artificial Intelligence and Law.
 \newblock 2017.
 \newblock \url{https://ceur-ws.org/Vol-2143/paper5.pdf}.
-
-\bibitem[Lin et~al.(2012)Lin, Kuo, Chang, et~al.]{lin2012exploiting}
-LIN W, KUO T, CHANG T, et~al.
-\newblock Exploiting machine learning models for chinese legal documents labeling, case classification, and sentencing prediction\allowbreak[C]//\allowbreak
-Proceedings of ROCLING.
-\newblock 2012: 140.
-
-\bibitem[Liu et~al.(2004)Liu, Chang, and Ho]{liu2004case}
-LIU C, CHANG C, HO J.
-\newblock Case instance generation and refinement for case-based criminal summary judgments in chinese\allowbreak[J].
-\newblock Journal of Information Science and Engineering, 2004, 20\allowbreak (4): 783-800.
 
 \bibitem[Ling et~al.(2017)Ling, Yogatama, Dyer, et~al.]{ling2017program}
 LING W, YOGATAMA D, DYER C, et~al.

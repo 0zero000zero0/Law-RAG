@@ -5,23 +5,23 @@
 
 本实验采用开源的CAIL 2018数据集~\cite{xiao2018cail2018largescalelegaldataset}。该数据集包含1,927,685个案例，涵盖202种刑事罪名和183条刑法法规。其中，训练集有1,927,685条数据，测试集有216,829条数据。
 为验证本文提出方法的有效性，本研究从CAIL 2018~\cite{xiao2018cail2018largescalelegaldataset}中按罪名分层采样10\%的数据，构建了CAIL Small数据集，用于消融实验和分析实验。CAIL Small和CAIL的数据分布如表~\ref{tab:cail}所示。
-数据集中，多被告案件的法条分布常呈现长尾现象。如图\ref{fig:acc_dis}所示，各法条在判决结果中的出现频率及占比存在较大差异。在测试数据的法条分布中，占比最高的五种罪行是盗窃、危险驾驶、故意伤害和交通肇事，其占比分别为20.63\%、17.17\%、10.49\%、8.29\%和7.33\%。占比最高的十种罪行占总测试数据的73.58\%，而占比最少的100种罪行仅占总数据的1.83\%。
-如图\ref{fig:art_dis}所示，法条数据分布同样呈现长尾趋势。占比最高的十种相关法条占测试数据的0.73\%，而占比最低的100种法条仅占2.44\%。
 
-\begin{figure*}[!htbp]
-	\begin{minipage}{0.5\linewidth}
-		\centering
-		\includegraphics[width=1\linewidth]{fig/accusation_distribution.pdf}
-		\caption{测试数据的罪名分布}
-		\label{fig:art_dis}
-	\end{minipage}
-	\begin{minipage}{0.5\linewidth}
-		\centering
-		\includegraphics[width=1\linewidth]{fig/article_distribution.pdf}
-		\caption{测试数据的法条数据分布}
-		\label{fig:acc_dis}
-	\end{minipage}
-\end{figure*}
+数据集中，多被告案件的法条分布常呈现长尾现象。如表\ref{tab:cail}所示，各法条在判决结果中的出现频率及占比存在较大差异。在测试数据的法条分布中，占比最高的五种罪行是盗窃、危险驾驶、故意伤害和交通肇事，其占比分别为20.36\%、16.94\%、10.35\%、8.18\%和7.94\%。占比最高的六种罪行占总测试数据的66.84\%，而占比最少的100种罪行仅占总数据的1.83\%。此外，法条数据分布同样呈现长尾趋势。占比最高的六种相关法条占测试数据的66.75\%，而占比最低的100种法条仅占2.44\%。
+
+% \begin{figure*}[!htbp]
+% 	\begin{minipage}{0.5\linewidth}
+% 		\centering
+% 		\includegraphics[width=1\linewidth]{fig/accusation_distribution.pdf}
+% 		\caption{测试数据的罪名分布}
+% 		\label{fig:art_dis}
+% 	\end{minipage}
+% 	\begin{minipage}{0.5\linewidth}
+% 		\centering
+% 		\includegraphics[width=1\linewidth]{fig/article_distribution.pdf}
+% 		\caption{测试数据的法条数据分布}
+% 		\label{fig:acc_dis}
+% 	\end{minipage}
+% \end{figure*}
 \subsection{\heiti 实验设置}
 本研究利用CAIL 2018~\cite{xiao2018cail2018largescalelegaldataset}的训练集构建案例数据库。为在控制数据库规模的同时兼顾检索效率和案例代表性，本研究从训练集中每种罪名最多抽取100条数据，共构建1,676个案例。
 法条数据库使用中国刑法典作为文本数据。
@@ -110,6 +110,8 @@ CAIL 2018法律判决预测中的罪名和刑期预测两项子任务，均属�
 \subsection{\heiti 分析实验}
 为确定最佳的相似案例检索和相关法条检索数量，我们在CAIL Small数据集上进行了分析实验。具体而言，我们对比了不同数量的相似案例和相关法条的Top-K参数对模型性能（F1分数）的影响。实验结果如图~\ref{fig:analysis}所示。
 
+
+对于不同检索数量的相关法条，模型的整体F1分数在不同的Top-K值下保持稳定。这表明在检索相关法律条文时，模型的性能在此范围内对Top-K值不敏感。其原因在于法律条文通常明确且每个案件通常仅涉及一条或少数几条相关法条，因此即使Top-K值较小，相关法条检索也能提供足够的信息以进行准确判决。
 \begin{figure*}[htpb]
 	\centering
 	\includegraphics[width=1\linewidth]{fig/analysis.pdf}
@@ -117,23 +119,19 @@ CAIL 2018法律判决预测中的罪名和刑期预测两项子任务，均属�
 	\label{fig:analysis}
 \end{figure*}
 
-对于不同检索数量的相关法条，模型的整体F1分数在不同的Top-K值下保持稳定。这表明在检索相关法律条文时，模型的性能在此范围内对Top-K值不敏感。其原因在于法律条文通常明确且每个案件通常仅涉及一条或少数几条相关法条，因此即使Top-K值较小，相关法条检索也能提供足够的信息以进行准确判决。
-
 对于不同数量的相似案例参考，模型在罪名预测和刑期预测上的F1分数相对稳定，但在相关法条预测上，F1分数随Top-K值的增加而逐渐提升。这表明在相似案例检索中，更多案例可提供更丰富的司法实践经验，从而提高模型的判决准确性。特别是对于法律定义边界模糊的罪名，更多的司法实践参考能帮助LLM更好地理解不同法律条文在实际应用中的区别，并更合理地应用法律条文。
 
 \subsection{\heiti 案例研究}
-\begin{figure*}[htpb]
-	\centering
-	\includegraphics[width=0.8\linewidth]{fig/case.pdf}
-	\caption{案例说明}
-	\label{fig:case}
-\end{figure*}
+
 本研究提出的方法将以一个具体的盗窃案件为例进行说明。首先，系统接收一段原始的案件事实描述:
-\tbox{泸州市江某区人民检察院指控: 2014年10月8日, 被告人苟某某在泸州市江某区忠山小学附近, 趁被害人何某某不备之机, 采用扒窃方式盗走其裤袋内现金人民币5320元}
+% \tbox{
+	泸州市江某区人民检察院指控: 2014年10月8日, 被告人苟某某在泸州市江某区忠山小学附近, 趁被害人何某某不备之机, 采用扒窃方式盗走其裤袋内现金人民币5320元
+	% }
+
 
 接着，系统利用LLM对该文本进行“判决核心要素提取”，生成结构化的犯罪特征$F$:
 
-\tbox{
+% \tbox{
 主体 = "自然人、成年、无特殊身份"
 
 主观 = "直接故意（非法占有他人财物）"
@@ -145,16 +143,23 @@ CAIL 2018法律判决预测中的罪名和刑期预测两项子任务，均属�
 核心证据 = ["被害人陈述", "被告人供述", "现场抓获记录"]
 
 证明力 = "被告人的供述与被害人陈述相互印证，且有现场抓获记录佐证"
-}
+% }
 
 随后，进入本方法的核心——双重知识检索阶段。系统会将提取出的核心要素$F$通过文本嵌入模型BAAI/BGE-m3转换为高维查询向量。该查询向量被用于在两条并行路径上执行检索：第一条路径中，系统在预先向量化的法律数据库中进行近似最近邻（ANN）搜索，通过计算内积相似度，找出与案件特征最匹配的法律条文$L$：
 
-\tbox{
+\begin{figure*}[htpb]
+	\centering
+	\includegraphics[width=0.8\linewidth]{fig/case.pdf}
+	\caption{案例说明}
+	\label{fig:case}
+\end{figure*}
+
+% \tbox{
 中华人民共和国刑法第二百六十四条:盗窃公私财物，数额较大的，或者多次盗窃、入户盗窃、携带凶器盗窃、扒窃的，处三年以下有期徒刑、拘役或者管制，并处或者单处罚金；
-}
+% }
 
 第二条路径中，系统同样利用该查询向量，在向量化的案例数据库中检索相似判例$S$:
-\tbox{
+% \tbox{
 罪名类别: 盗窃；
 
 犯罪构成:
@@ -172,13 +177,13 @@ CAIL 2018法律判决预测中的罪名和刑期预测两项子任务，均属�
 \ \ \ \ 罪名成立: 盗窃罪；
 
 \ \ \ \ 刑期: 有期徒刑51个月，罚金人民币70000元...；
-}
+% }
+
 此处的案例检索更为精细，它会综合考量罪名、犯罪构成、证据特征等多个维度的相似度，以确保筛选出的历史判例与当前案件具有高度可比性。
 
+最后，将原始案情$C$、提取的核心要素$F$、检索到的法律条文$L$及相似案例$S$共同作为输入，送入核心LLM推理引擎，由其进行综合分析与推理，最终生成一个的结构化判决结果$J$：
 
-最后，将原始案情（$C$）、提取的核心要素$F$、检索到的法律条文$L$及相似案例$S$共同作为输入，送入核心LLM推理引擎，由其进行综合分析与推理，最终生成一个的结构化判决结果（$J$）：
-
-\tbox{
+% \tbox{
 accusation = ["盗窃罪"]；
 
 relevant\_articles = ["264"]；
@@ -190,4 +195,4 @@ imprisonment = 8；
 death\_penalty = false；
 
 life\_imprisonment = false；
-}
+% }

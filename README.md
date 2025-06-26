@@ -19,14 +19,14 @@ pip install -r requirements.txt
 python main.py
 ```
 ## 说明
-`db`为相似案例的milvus sql light 数据，可以直接使用`pymilvus`导入
+`db`为相似案例的[milvus sql light](https://milvus.io/docs/zh/quickstart.md)数据，可以直接使用`pymilvus`导入
 ```python
 from pymilvus import MilvusClient
 client = MilvusClient(r'db/case.db')
 client.load_collection('legal_cases')
 ```
 
-`pkl`中的`sampled_data.pkl`是序列化以后的CAIL Small数据，类型为`dict[int,dict]`，`int`为数据索引内层，dict`为一行数据
+`pkl`中的`sampled_data.pkl`是序列化以后的[CAIL](https://github.com/thunlp/CAIL/tree/master) Small数据，类型为`dict[int,dict]`，`int`为数据索引内层，dict`为一行数据
 ```python
 import pickle
 with open("pkl/sampled_data.pkl", "rb") as f:
@@ -34,3 +34,10 @@ with open("pkl/sampled_data.pkl", "rb") as f:
 ```
 
 `prompt`中`extract_feature.txt`为`判决核心要素提取`的提示词，`infer.txt`为`多源信息融合推理`模板。
+
+## 支持链接
+Milvus向量数据: [https://milvus.io/docs/zh/quickstart.md](https://milvus.io/docs/zh/quickstart.md)
+
+CAIL数据集: [https://github.com/thunlp/CAIL/tree/master](https://github.com/thunlp/CAIL/tree/master)
+
+SAMLAB: [https://github.com/GZU-SAMLab](https://github.com/GZU-SAMLab)

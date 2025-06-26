@@ -25,6 +25,7 @@ from pymilvus import MilvusClient
 client = MilvusClient(r'db/case.db')
 client.load_collection('legal_cases')
 ```
+>注意: Windows系统似乎无法直接使用pymilvus库，请使用Linux系统
 
 `pkl`中的`sampled_data.pkl`是序列化以后的[CAIL](https://github.com/thunlp/CAIL/tree/master) Small数据，类型为`dict[int,dict]`，`int`为数据索引内层，dict`为一行数据
 ```python

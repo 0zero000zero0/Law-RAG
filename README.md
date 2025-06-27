@@ -30,15 +30,28 @@ client.load_collection('legal_cases')
 ```
 >注意: Windows系统似乎无法直接使用pymilvus库，请使用Linux系统
 
-`pkl`中的`sampled_data.pkl`是序列化以后的[CAIL](https://github.com/thunlp/CAIL/tree/master) Small数据，类型为`dict[int,dict]`，`int`为数据索引，`内层dict`为一行数据
+`pkl`中的`sampled_data.pkl`是序列化以后的[CAIL](https://github.com/thunlp/CAIL/tree/master) Small数据，类型为`dict[int,dict]`，`int`为数据索引，内层`dict`为一行数据
 ```python
 import pickle
 with open("pkl/sampled_data.pkl", "rb") as f:
     data = pickle.load(f)
+print(data[0])
+```
+输出:
+```json
+{
+    'meta': {'accusation': ['故意伤害'],
+    'term_of_imprisonment': {'imprisonment': 6,
+    'death_penalty': False,
+    'life_imprisonment': False},
+    'relevant_articles': ['234'],
+    'criminals': ['逯某某'],
+    'punish_of_money': 0},
+    'fact': '商丘市梁园区人民检察院指控, 2014年7月21日12时许, 被告人逯某某在商丘市梁园区中州办事处解放新村东苑7胡同自己家中, 因家庭纠纷, 与妻子冯某某发生厮打, 致冯某某左侧桡骨骨折, 经鉴定已构成轻伤二级。并向法庭提供了被告人供述、被害人陈述、证人证言、鉴定意见、相关书证等证据。认为被告人逯某某的行为触犯了《中华人民共和国刑法》xxxx之规定, 构成xx, 请求依法判处。\r\n被害人的意见与公诉机关指控的意见一致, 请求依法追究被告人的刑事责任。\r\n'
+}
 ```
 
-`prompt`中`extract_feature.txt`为`判决核心要素提取`的提示词，`infer.txt`为`多源信息融合推理`模板。
-
+`prompt`中`extract_feature.txt`为`判决核心要素提取`的提示词，`infer.txt`为`多源信息融合推理`提示词；使用`langchain`的`PromptTemplate`构建。
 ## 支持链接
 Milvus向量数据库: [https://milvus.io/docs/zh/quickstart.md](https://milvus.io/docs/zh/quickstart.md)
 
